@@ -1,0 +1,17 @@
+[
+    {
+        "question": "How many annual leaves do employees receive?",
+        "expected_answer": "20 annual leaves",
+        "expected_source": "test.md"
+    },
+    {
+        "question": "What is the employee leave policy?",
+        "expected_answer": "20 annual leaves",
+        "expected_source": "test.md"
+    },
+    {
+        "question": "What shoul Employees carry?",
+        "expected_answer": "",
+        "expected_source": "sample.html"
+    }
+]
