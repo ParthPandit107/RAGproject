@@ -10,8 +10,68 @@
         "expected_source": "test.md"
     },
     {
-        "question": "What shoul Employees carry?",
-        "expected_answer": "",
+        "question": "How many leave days are employees entitled to?",
+        "expected_answer": "20 annual leaves",
+        "expected_source": "test.md"
+    },
+    {
+        "question": "How much annual leave is provided?",
+        "expected_answer": "20 annual leaves",
+        "expected_source": "test.md"
+    },
+    {
+        "question": "What is the annual leave entitlement?",
+        "expected_answer": "20 annual leaves",
+        "expected_source": "test.md"
+    },
+    {
+        "question": "What are the office timings?",
+        "expected_answer": "9 AM to 6 PM",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "When does the office open and close?",
+        "expected_answer": "9 AM to 6 PM",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "What are the company's working hours?",
+        "expected_answer": "9 AM to 6 PM",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "What time does the office operate?",
+        "expected_answer": "9 AM to 6 PM",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "State the office timings.",
+        "expected_answer": "9 AM to 6 PM",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "What must employees carry?",
+        "expected_answer": "ID cards",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "Are employees required to carry ID cards?",
+        "expected_answer": "ID cards",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "What identification should employees carry?",
+        "expected_answer": "ID cards",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "What do employees need to bring to the office?",
+        "expected_answer": "ID cards",
+        "expected_source": "sample.html"
+    },
+    {
+        "question": "What is one company rule regarding identification?",
+        "expected_answer": "ID cards",
         "expected_source": "sample.html"
     }
 ]

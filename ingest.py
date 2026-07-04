@@ -18,7 +18,7 @@ tokenizer = model.tokenizer
 db = lancedb.connect(DB_DIR)
 
 def load_pdf(file_path):
-    doc = fitz.open(file_path)
+    doc = fitz.open(str(file_path))
 
     text = []
 
@@ -59,6 +59,9 @@ def load_document(file_path):
         raise ValueError(f"Unsupported file type: {suffix}")   
 
 def chunk_text(text, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
+    if overlap >= chunk_size:
+        raise ValueError("Overlap must be smaller than chunk size.")
+
     token_ids = tokenizer.encode(
         text,
         add_special_tokens=False
@@ -110,13 +113,18 @@ def ingest_documents():
 
         chunks = chunk_text(text)
 
-        for index, chunk in enumerate(chunks):
+        embeddings = model.encode(
+            chunks,
+            normalize_embeddings=True
+        ).tolist()
+
+        for index, (chunk, embedding) in enumerate(zip(chunks, embeddings)):
 
             rows.append(
                 {
                     "id": generate_hash(chunk),
                     "text": chunk,
-                    "embedding": create_embedding(chunk),
+                    "embedding": embedding,
                     "source": file_path.name,
                     "chunk_index": index,
                 }
